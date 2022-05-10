@@ -44,12 +44,12 @@
 						<Option value="triggered">Triggered</Option>
 					</List>
 				</ValueType>
-				<TriggerLabel>Alarm State Changed</TriggerLabel>
-                <TriggerLabelPrefix>Alarm Changed to</TriggerLabelPrefix>
-				<ControlPageLabel>Alarm State</ControlPageLabel>
-                <ControlPageLabelPrefix>Alarm state is</ControlPageLabelPrefix>
+				<TriggerLabel>Security System State Changed</TriggerLabel>
+                <TriggerLabelPrefix>Security System State Changed to</TriggerLabelPrefix>
+				<ControlPageLabel>Security System State</ControlPageLabel>
+                <ControlPageLabelPrefix>Security system state is</ControlPageLabelPrefix>
 			</State>
 		</States>
-       <UiDisplayStateId>stay</UiDisplayStateId>
+       <UiDisplayStateId>securitySystemState</UiDisplayStateId>
 	</Device>
 </Devices>

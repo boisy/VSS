@@ -78,7 +78,7 @@ class Plugin(indigo.PluginBase):
 	######################
 	def setSecuritySystemState(self, pluginAction, dev):
 		try:
-			newState = pluginAction.props.get(u"securitySystemState", "3")
+			newState = pluginAction.props.get(u"securitySystemState", "disarm")
 		except ValueError:
 			indigo.server.log(u"set alarm state action to device \"%s\" -- invalid alarm state value %s" % (dev.name,), isError=True)
 			return
@@ -90,16 +90,16 @@ class Plugin(indigo.PluginBase):
 		if sendSuccess:
 			# If success then log that the command was successfully sent.
 			indigo.server.log("Setting security system state to " + newState)
-			if newState == "0":
+			if newState == "stay":
 				uiv = "stay arm"
 				imageRef = indigo.kStateImageSel.SensorOn
-			elif newState == "1":
+			elif newState == "away":
 				uiv = "away arm"
 				imageRef = indigo.kStateImageSel.SensorOn
-			elif newState == "2":
+			elif newState == "night":
 				uiv = "night arm"
 				imageRef = indigo.kStateImageSel.SensorOn
-			elif newState == "3":
+			elif newState == "disarm":
 				uiv = "disarm"
 				imageRef = indigo.kStateImageSel.SensorOff
 			else:
