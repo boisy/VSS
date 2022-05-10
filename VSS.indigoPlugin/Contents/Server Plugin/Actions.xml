@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!-- By default sensor type devices will inherit all
+	 SensorAction actions, which will be dispatched to
+	 the actionControlSensor() method defined in plugin.py.
+	 
+	 Additional custom actions can also be defined here. The
+	 example below defines a custom action to modify the brightness
+	 of the backlit display of the module, and to modify the custom
+	 backlightBrightness state added to Devices.xml.
+-->
+<Actions>
+	<Action id="setSecuritySystemState" deviceFilter="self">
+		<Name>Set Security System State</Name>
+		<CallbackMethod>setSecuritySystemState</CallbackMethod>
+		<ConfigUI>
+			<Field id="description" type="textfield" hidden="true">
+				<Label>runtime calculated</Label>
+			</Field>
+			<Field type="menu" id="securitySystemState" defaultValue="3">
+				<Label>Alarm State:</Label>
+				<List>
+					<Option value="0">Stay Arm</Option>
+					<Option value="1">Away Arm</Option>
+					<Option value="2">Night Arm</Option>
+					<Option value="3">Disarm</Option>
+					<Option value="4">Triggered</Option>
+				</List>
+			</Field>
+		</ConfigUI>
+	</Action>
+</Actions>

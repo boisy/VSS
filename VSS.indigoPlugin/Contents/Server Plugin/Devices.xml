@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<!-- If your plugin defines device types, you can define them here.
+
+	 Devices must specify their type (via the type attribute):
+
+		relay (ON/OFF/STATUS)
+		dimmer (ON/OFF/DIM/BRIGHTEN/SET BRIGHTNESS/STATUS)
+		speedcontrol (ON/OFF/SET SPEED LEVEL/SET SPEED INDEX/INCREASE/DECREASE/STATUS)
+		sensor (ON/OFF/STATUS)
+		thermostat
+		sprinkler
+		custom
+
+	 The first six inherit states, actions and events from Indigo. You can
+	 also specify your own custom actions and additional states, if needed.
+
+	 The Device examples below specifies the sensor types.
+	 
+	 Devices must also specify a unique typeID - so, for instance, if you define
+	 2 sensor type devices then your plugin can distinguish between the two by
+	 the typeID.
+-->
+
+<Devices>
+	<!-- This device illustrates how a plugin can inherit Indigo's sensor
+	device behavior including on/off and numerical value states and will
+	support Indigo and Indigo Touch's native UI for sensor type devices.
+	-->
+	<Device type="custom" id="VirtualSecuritySystemType">
+		<Name>Virtual Security System</Name>
+		<ConfigUI>
+			<Field id="location" type="textfield" defaultValue="My House">
+				<Label>Location:</Label>
+			</Field>
+		</ConfigUI>
+		<States>
+			<State id="securitySystemState">
+				<ValueType>
+					<List>
+						<Option value="stay">Stay Arm</Option>
+						<Option value="away">Away Arm</Option>
+						<Option value="night">Night Arm</Option>
+						<Option value="disarm">Disarm</Option>
+						<Option value="triggered">Triggered</Option>
+					</List>
+				</ValueType>
+				<TriggerLabel>Alarm State Changed</TriggerLabel>
+                <TriggerLabelPrefix>Alarm Changed to</TriggerLabelPrefix>
+				<ControlPageLabel>Alarm State</ControlPageLabel>
+                <ControlPageLabelPrefix>Alarm state is</ControlPageLabelPrefix>
+			</State>
+		</States>
+       <UiDisplayStateId>stay</UiDisplayStateId>
+	</Device>
+</Devices>
