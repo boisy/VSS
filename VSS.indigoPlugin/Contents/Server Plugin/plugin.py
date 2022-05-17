@@ -90,16 +90,16 @@ class Plugin(indigo.PluginBase):
 		if sendSuccess:
 			# If success then log that the command was successfully sent.
 			indigo.server.log("Setting security system state to " + newState)
-			if newState == "stay":
+			if newState == "0":
 				uiv = "stay arm"
 				imageRef = indigo.kStateImageSel.SensorOn
-			elif newState == "away":
+			elif newState == "1":
 				uiv = "away arm"
 				imageRef = indigo.kStateImageSel.SensorOn
-			elif newState == "night":
+			elif newState == "2":
 				uiv = "night arm"
 				imageRef = indigo.kStateImageSel.SensorOn
-			elif newState == "disarm":
+			elif newState == "3":
 				uiv = "disarm"
 				imageRef = indigo.kStateImageSel.SensorOff
 			else:
