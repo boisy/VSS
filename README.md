@@ -16,7 +16,7 @@ In Indigo, create actions to set the state of the VSS. Here are some examples:
 
 Once you create the desired actions, create triggers to act on the state chnage.
 
-  - A trigger that plays a noise over your HomePods using Airfoil Pro if the state of the security system changes to "Triggerd."
+  - A trigger that plays a noise over your HomePods using Airfoil Pro if the state of the security system changes to "Triggered."
 
 ## HomeKit Support
 
