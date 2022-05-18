@@ -11,7 +11,6 @@ import sys
 import random
 import struct
 import json
-import httplib
 import select
 
 # Note the "indigo" module is automatically imported and made available inside
