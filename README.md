@@ -10,7 +10,11 @@ The Virtual Security System (VSS) PlugIn for Indigo allows you to create a "virt
 
 These are the same states that most security systems have.
 
-In Indigo, create actions to set the state of the VSS. Here are some examples:
+## Using the Plugin
+
+1. Install the plugin and create a new device.
+
+2. Create actions to set the state of the VSS. Here are some examples:
 
   - A motion sensor outside your home. Create an action that checks if the state is "Stay Arm" or "Away Arm." If so, the action changes the state to "Triggered."
   - A motion sensor inside of your home. Create an action that checks if the state is "Away Arm." If so, the action changes the state to "Triggered."
