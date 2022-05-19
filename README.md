@@ -12,12 +12,12 @@ These are the same states that most security systems have.
 
 ## Using the Plugin
 
-1. Install the plugin and create a new device.
+1. Install the plugin and create a new VSS device.
 
-2. Create actions to set the state of the VSS. Here are some examples:
+2. Create actions to set the state of the device under certain conditions. Here are some examples:
 
-  - A motion sensor outside your home. Create an action that checks if the state is "Stay Arm" or "Away Arm." If so, the action changes the state to "Triggered."
-  - A motion sensor inside of your home. Create an action that checks if the state is "Away Arm." If so, the action changes the state to "Triggered."
+  - You have a motion sensor outside your home. Create an action that checks if the state is "Stay Arm" or "Away Arm." If so, the action changes the state to "Triggered."
+  - You have a motion sensor inside of your home. Create an action that checks if the state is "Away Arm." If so, the action changes the state to "Triggered."
 
 Once you create the desired actions, create triggers to act on the state chnage.
 
