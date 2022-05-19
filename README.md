@@ -20,4 +20,4 @@ Once you create the desired actions, create triggers to act on the state chnage.
 
 ## HomeKit Support
 
-With the HomeKitLink Siri plugin, you can expose your VSS to HomeKit through the Home app and set its state from there.
+With the [HomeKitLink](https://github.com/Ghawken/HomeKitLink-Siri) plugin, you can expose your VSS to HomeKit through the Home app and set its state from there.
