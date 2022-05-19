@@ -12,6 +12,10 @@ These are the same states that most security systems have.
 
 ## Using the Plugin
 
+The plugin by itself is very simple. It's only when combining the plugin with other devices in Indigo that you can create elaborate and powerful security system scenarios with actions and triggers.
+
+To get started:
+
 1. Install the plugin and create a new VSS device.
 
 2. Create actions to set the state of the VSS device under certain conditions. Here are some examples:
@@ -23,7 +27,6 @@ Once you create the desired actions, create triggers to act on the state chnage.
 
   - Create a trigger that plays a noise over your HomePods using Airfoil Pro if the state of the VSS device changes to "Triggered."
 
-You can create elaborate and powerful security system scenarios with actions and triggers.
 
 ## HomeKit Support
 
