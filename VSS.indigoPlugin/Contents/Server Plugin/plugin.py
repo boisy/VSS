@@ -88,24 +88,24 @@ class Plugin(indigo.PluginBase):
 
 		if sendSuccess:
 			# If success then log that the command was successfully sent.
-			indigo.server.log("Setting security system state to " + newState)
-			if newState == "0":
-				uiv = "stay arm"
+			if newState == "stay" or newState == "0":
+				uiv = "stay"
 				imageRef = indigo.kStateImageSel.SensorOn
-			elif newState == "1":
-				uiv = "away arm"
+			elif newState == "away" or newState == "1":
+				uiv = "away"
 				imageRef = indigo.kStateImageSel.SensorOn
-			elif newState == "2":
-				uiv = "night arm"
+			elif newState == "night" or newState == "2":
+				uiv = "night"
 				imageRef = indigo.kStateImageSel.SensorOn
-			elif newState == "3":
+			elif newState == "disarm" or newState == "3":
 				uiv = "disarm"
 				imageRef = indigo.kStateImageSel.SensorOff
 			else:
 				uiv = "triggered"
 				imageRef = indigo.kStateImageSel.SensorTripped
 			dev.updateStateImageOnServer(imageRef)
-			dev.updateStateOnServer("securitySystemState", newState, uiValue=uiv)
+			indigo.server.log("Setting security system state to " + uiv)
+			dev.updateStateOnServer("securitySystemState", uiv, uiValue=uiv)
 		else:
 			# Else log failure but do NOT update state on Indigo Server.
 			indigo.server.log(u"send \"%s\" %s to %s failed" % (dev.name, "security system state mode", newState), isError=True)

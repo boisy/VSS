@@ -16,14 +16,14 @@
 			<Field id="description" type="textfield" hidden="true">
 				<Label>runtime calculated</Label>
 			</Field>
-			<Field type="menu" id="securitySystemState" defaultValue="3">
+			<Field type="menu" id="securitySystemState" defaultValue="disarm">
 				<Label>Alarm State:</Label>
 				<List>
-					<Option value="0">Stay Arm</Option>
-					<Option value="1">Away Arm</Option>
-					<Option value="2">Night Arm</Option>
-					<Option value="3">Disarm</Option>
-					<Option value="4">Triggered</Option>
+					<Option value="stay">Stay Arm</Option>
+					<Option value="away">Away Arm</Option>
+					<Option value="night">Night Arm</Option>
+					<Option value="disarm">Disarm</Option>
+					<Option value="triggered">Triggered</Option>
 				</List>
 			</Field>
 		</ConfigUI>
