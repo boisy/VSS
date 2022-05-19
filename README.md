@@ -14,14 +14,16 @@ These are the same states that most security systems have.
 
 1. Install the plugin and create a new VSS device.
 
-2. Create actions to set the state of the device under certain conditions. Here are some examples:
+2. Create actions to set the state of the VSS device under certain conditions. Here are some examples:
 
-  - You have a motion sensor outside your home. Create an action that checks if the state is "Stay Arm" or "Away Arm." If so, the action changes the state to "Triggered."
-  - You have a motion sensor inside of your home. Create an action that checks if the state is "Away Arm." If so, the action changes the state to "Triggered."
+  - You have a motion sensor outside your home. Create an action that checks if the state of the VSS device is "Stay Arm" or "Away Arm." If so, the action changes the state of the VSS device to "Triggered."
+  - You have a motion sensor inside of your home. Create an action that checks if the state of the VSS device is "Away Arm." If so, the action changes the state of the VSS device to "Triggered."
 
 Once you create the desired actions, create triggers to act on the state chnage.
 
-  - A trigger that plays a noise over your HomePods using Airfoil Pro if the state of the security system changes to "Triggered."
+  - Create a trigger that plays a noise over your HomePods using Airfoil Pro if the state of the VSS device changes to "Triggered."
+
+You can create elaborate and powerful security system scenarios with actions and triggers.
 
 ## HomeKit Support
 
