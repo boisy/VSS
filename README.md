@@ -1,10 +1,11 @@
 # VSS - Virtual Security System
 
-The Virtual Security System (VSS) PlugIn for Indigo allows you to create a "virtual security system" that can be in one of four states:
+The Virtual Security System (VSS) PlugIn for Indigo allows you to create a "virtual security system" that can be in one of five states:
 
 - Disarmed: the security system is not actively set to monitor triggers and any changes in sensors doesn't trigger.
-- Stay Arm: the security system is armed; sensors should trigger any change of status outside the home only.
-- Away Arm: the security system is armed; sensors should trigger any change of status inside and outside the home.
+- Stay Arm: the security system is armed for monitoring while someone is home; sensors should trigger any change of status outside the home only.
+- Away Arm: the security system is armed for monitoring when no one is home; sensors should trigger any change of status inside and outside the home.
+- Night Arm: the security system is armed for night monitoring; sensors should trigger any change of status inside and outside the home.
 - Triggered: the security system has been triggered due to a change in a sensor's state.
 
 These are the same states that most security systems have.
