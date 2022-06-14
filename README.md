@@ -23,7 +23,7 @@ To get started:
   - You have a motion sensor outside your home. Create an action that checks if the state of the VSS device is "Stay Arm" or "Away Arm." If so, the action changes the state of the VSS device to "Triggered."
   - You have a motion sensor inside of your home. Create an action that checks if the state of the VSS device is "Away Arm." If so, the action changes the state of the VSS device to "Triggered."
 
-Once you create the desired actions, create triggers to act on the state chnage.
+Once you create the desired actions, create triggers to act on the state change.
 
   - Create a trigger that plays a noise over your HomePods using Airfoil Pro if the state of the VSS device changes to "Triggered."
 
